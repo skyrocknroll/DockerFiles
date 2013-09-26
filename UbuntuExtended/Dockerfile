@@ -13,6 +13,6 @@ RUN echo "Acquire::http { Proxy "http://10.30.0.42:3142"; };" > /etc/apt/apt.con
 #Install install internal repo proxy
 RUN rm install.sh
 RUN apt-get update
-RUN apt-get install -y vim iputils-ping net-tools apt-utils dialog
+RUN apt-get install -y vim iputils-ping net-tools apt-utils dialog wget
 
 ENTRYPOINT ["/bin/bash"]
