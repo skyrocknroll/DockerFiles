@@ -1,4 +1,4 @@
 DockerFiles
 ===========
 
-My Collection od docker files
+My Collection of docker files
