@@ -12,6 +12,7 @@ RUN echo deb ftp://10.30.0.42/debs/ amd64/ >> /etc/apt/sources.list
 RUN echo 'Acquire::http { Proxy "http://10.30.0.42:3142"; };' > /etc/apt/apt.conf.d/01proxy
 #Install install internal repo proxy
 RUN apt-get update
+RUN apt-get upgrade -y
 RUN apt-get install -y vim iputils-ping net-tools apt-utils dialog wget
 
 ENTRYPOINT ["/bin/bash"]
