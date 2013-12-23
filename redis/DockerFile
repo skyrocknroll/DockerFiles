@@ -1,0 +1,12 @@
+#Ubuntu 12.04 with the basic required packages
+
+FROM ubuntu
+
+MAINTAINER Yuvaraj L email : uvaraj6@gmail.com
+
+RUN apt-get install -y python-software-properties
+RUN add-apt-repository ppa:chris-lea/redis-server
+RUN apt-get install redis
+EXPOSE 6379
+
+ENTRYPOINT ["/usr/bin/redis-server"]
