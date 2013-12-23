@@ -6,7 +6,7 @@ MAINTAINER Yuvaraj L email : uvaraj6@gmail.com
 
 
 RUN apt-get install -y python-software-properties
-RUN add-apt-repository ppa:chris-lea/redis-server
+RUN add-apt-repository -y ppa:chris-lea/redis-server
 RUN apt-get update
 RUN apt-get install -y redis-server
 EXPOSE 6379
